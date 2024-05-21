@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
 import ComfirmForgetPassword from "./screens/comfrimForgetPassword";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
+import { globalStyles } from "./styles/global";
 
 const getFonts = () =>
   Font.loadAsync({
@@ -16,7 +17,7 @@ export default function App() {
 
   if (fontLoaded) {
     return (
-      <View style={styles.container}>
+      <View style={globalStyles.container}>
         <ComfirmForgetPassword />
       </View>
     );
@@ -30,12 +31,3 @@ export default function App() {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 24,
-    paddingTop: 80,
-    paddingBottom: 50,
-  },
-});
