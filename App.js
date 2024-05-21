@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
-import ComfirmForgetPassword from "./screens/comfrimForgetPassword";
 import { View } from "react-native";
 import { globalStyles } from "./styles/global";
+import ComfirmForgetPassword from "./screens/comfrimForgetPassword";
+import Home from "./screens/Home";
 
 const getFonts = () =>
   Font.loadAsync({
@@ -19,6 +20,7 @@ export default function App() {
     return (
       <View style={globalStyles.container}>
         <ComfirmForgetPassword />
+        {/* <Home /> */}
       </View>
     );
   } else {

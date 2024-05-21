@@ -6,13 +6,20 @@ export const globalStyles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingTop: 80,
     paddingBottom: 50,
-    backgroundColor: "F4F4FA",
+    backgroundColor: "#EAEAF3",
+    // backgroundColor: "#F4F4FA",
   },
   titleText: {
     color: "#2D2D2D",
     fontSize: 28,
     lineHeight: 33.6,
     fontFamily: "Ciutadella-Bold",
+  },
+  subTitleText: {
+    color: "#2D2D2D",
+    fontSize: 24,
+    lineHeight: 28.8,
+    fontFamily: "Ciutadella-medium",
   },
   paragraph: {
     fontSize: 18,

@@ -23,7 +23,7 @@ const ComfirmForgetPassword = () => {
         </Text>
         <Text style={globalStyles.paragraph}>instructions to your email.</Text>
         <View style={{ marginTop: 70, marginBottom: 16 }}>
-          <CustomButton title="Open email app" />
+          <CustomButton title="Open email app" color="#130F26" />
         </View>
         <View>
           <Text style={globalStyles.paragraph}>Skip I’ll confirm later</Text>
