@@ -35,6 +35,7 @@ const ComfirmForgetPassword = () => {
             textAlign: "center",
             lineHeight: 21.6,
             color: "crimson",
+            fontFamily: "Ciutadella-regular",
           }}
         >
           or try another email address
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     marginVertical: 24,
     color: "#2D2D2D",
     fontSize: 28,
-    fontWeight: "bold",
+    fontFamily: "Ciutadella-Bold",
   },
   text: {
     fontSize: 18,
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
     lineHeight: 21.6,
     color: "#2D2D2D",
     opacity: 0.5,
+    fontFamily: "Ciutadella-regular",
   },
 });
 

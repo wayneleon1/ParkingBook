@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 20,
     lineHeight: 24,
+    fontFamily: "Ciutadella-regular",
   },
 });
 
