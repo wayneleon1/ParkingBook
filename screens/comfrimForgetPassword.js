@@ -2,28 +2,37 @@ import React from "react";
 import { Image, View, Text, StyleSheet } from "react-native";
 import CustomButton from "../components/Button";
 import { globalStyles } from "../styles/global";
+
 const ComfirmForgetPassword = () => {
   return (
     <View style={styles.container}>
-      <View
-        style={{
-          alignItems: "center",
-        }}
-      >
-        <View style={styles.circle}></View>
-        <Image
-          style={{ position: "absolute", top: 100 }}
-          source={require("../assets/Asset1.png")}
-        />
-        <View style={{ marginVertical: 24 }}>
-          <Text style={globalStyles.titleText}>Check your Email</Text>
+      <View>
+        <View
+          style={{
+            alignItems: "center",
+          }}
+        >
+          <View style={styles.circle}></View>
+          <Image
+            style={{ position: "absolute", top: 100 }}
+            source={require("../assets/Asset1.png")}
+          />
+          <View style={{ marginVertical: 24 }}>
+            <Text style={globalStyles.titleText}>Check your Email</Text>
+          </View>
+          <Text style={globalStyles.paragraph}>
+            We have sent a password recover
+          </Text>
+          <Text style={globalStyles.paragraph}>
+            instructions to your email.
+          </Text>
         </View>
-        <Text style={globalStyles.paragraph}>
-          We have sent a password recover
-        </Text>
-        <Text style={globalStyles.paragraph}>instructions to your email.</Text>
-        <View style={{ marginTop: 70, marginBottom: 16 }}>
-          <CustomButton title="Open email app" color="#130F26" />
+        <View style={{ marginTop: 60, marginBottom: 16 }}>
+          <CustomButton
+            title="Open email app"
+            textColor="#FFFFFF"
+            buttonColor="#130F26"
+          />
         </View>
         <View>
           <Text style={globalStyles.paragraph}>Skip I’ll confirm later</Text>

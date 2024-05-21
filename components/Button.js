@@ -1,26 +1,35 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
-const CustomButton = ({ title, color }) => {
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+
+import { Text, TouchableOpacity, View } from "react-native";
+const CustomButton = ({ title, buttonColor, textColor, icon }) => {
   return (
     <TouchableOpacity
       style={{
-        backgroundColor: `${color}`,
+        flexDirection: "row",
+        justifyContent: "center",
+        gap: 20,
+        backgroundColor: `${buttonColor}`,
         paddingHorizontal: 55,
-        paddingVertical: 18,
+        paddingVertical: 19,
         borderRadius: 15,
       }}
     >
-      <Text style={styles.text}>{title}</Text>
+      <View>{icon ? icon : ""}</View>
+      <View>
+        <Text
+          style={{
+            color: `${textColor}`,
+            fontSize: 20,
+            lineHeight: 24,
+            fontFamily: "Ciutadella-medium",
+          }}
+        >
+          {title}
+        </Text>
+      </View>
     </TouchableOpacity>
   );
 };
-const styles = StyleSheet.create({
-  text: {
-    color: "#FFFFFF",
-    fontSize: 20,
-    lineHeight: 24,
-    fontFamily: "Ciutadella-medium",
-  },
-});
 
 export default CustomButton;

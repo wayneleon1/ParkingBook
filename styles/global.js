@@ -17,6 +17,7 @@ export const globalStyles = StyleSheet.create({
   },
   subTitleText: {
     color: "#2D2D2D",
+    textAlign: "center",
     fontSize: 24,
     lineHeight: 28.8,
     fontFamily: "Ciutadella-medium",

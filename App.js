@@ -19,8 +19,8 @@ export default function App() {
   if (fontLoaded) {
     return (
       <View style={globalStyles.container}>
-        <ComfirmForgetPassword />
-        {/* <Home /> */}
+        {/* <ComfirmForgetPassword /> */}
+        <Home />
       </View>
     );
   } else {
