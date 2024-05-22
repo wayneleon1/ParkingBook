@@ -1,10 +1,10 @@
 import React from "react";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-
 import { Text, TouchableOpacity, View } from "react-native";
-const CustomButton = ({ title, buttonColor, textColor, icon }) => {
+
+const CustomButton = ({ title, buttonColor, textColor, icon, onPress }) => {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{
         flexDirection: "row",
         justifyContent: "center",

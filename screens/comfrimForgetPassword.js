@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, View, Text, StyleSheet } from "react-native";
-import CustomButton from "../components/Button";
+import CustomButton from "../components/HSbutton";
 import { globalStyles } from "../styles/global";
 
 const ComfirmForgetPassword = () => {

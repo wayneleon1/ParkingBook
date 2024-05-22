@@ -11,8 +11,7 @@ const Register = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 24,
-    backgroundColor: "pink",
+    flex: 1,
   },
 });
 
