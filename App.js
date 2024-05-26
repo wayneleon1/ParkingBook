@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
 import { NavigationContainer } from "@react-navigation/native";
-import { View } from "react-native";
-import { globalStyles } from "./styles/global";
-import ComfirmForgetPassword from "./screens/comfrimForgetPassword";
-import Home from "./screens/Home";
-import Register from "./screens/register";
+import "react-native-gesture-handler";
+
 import AppRoutes from "./routes/AppRoutes";
-import MyStack from "./screens/MyStack";
 
 const getFonts = () =>
   Font.loadAsync({
@@ -22,10 +18,9 @@ export default function App() {
 
   if (fontLoaded) {
     return (
-      // <NavigationContainer>
-      //   <MyStack />
-      // </NavigationContainer>
-      <Home />
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
     );
   } else {
     return (
