@@ -22,9 +22,10 @@ export default function App() {
 
   if (fontLoaded) {
     return (
-      <NavigationContainer>
-        <MyStack />
-      </NavigationContainer>
+      // <NavigationContainer>
+      //   <MyStack />
+      // </NavigationContainer>
+      <Home />
     );
   } else {
     return (

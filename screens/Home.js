@@ -7,58 +7,67 @@ import { Ionicons } from "@expo/vector-icons";
 
 const Home = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={{ position: "absolute", right: 0 }}>
-        <Text style={globalStyles.paragraph}>Skip</Text>
-      </TouchableOpacity>
-      <View style={{ marginTop: "50%", alignItems: "center" }}>
-        <Image source={require("../assets/car.png")} />
-      </View>
-
-      <View style={{ marginTop: 80, gap: 8 }}>
-        <Text style={globalStyles.subTitleText}>Welcome</Text>
-        <Text style={globalStyles.paragraph}>
-          Find a best possible way to park
-        </Text>
-        <View
-          style={{ flexDirection: "row", justifyContent: "center", gap: 5 }}
-        >
-          <View style={styles.point}></View>
-          <View style={styles.point}></View>
-          <View style={styles.point}></View>
-        </View>
-      </View>
-      <View style={{ marginTop: 50, gap: 20 }}>
-        <CustomButton
-          title="Login with Email"
-          buttonColor="#2D2D2D"
-          textColor="white"
-          icon={<FontAwesome name="envelope" size={24} color="white" />}
-          onPress={() => {
-            navigation.navigate("Register");
-          }}
-        />
-
-        <View>
-          <CustomButton
-            title="Login with Phone"
-            buttonColor="white"
-            textColor="#2D2D2D"
-            icon={<Ionicons name="call" size={24} color="#2D2D2D" />}
-          />
-        </View>
-        <View
+    <View style={globalStyles.container}>
+      <View style={styles.container}>
+        <TouchableOpacity
           style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            gap: 10,
-            alignItems: "center",
+            position: "absolute",
+            right: 0,
+            top: "20%",
           }}
         >
-          <Text style={globalStyles.paragraph}>Don’t have an account?</Text>
-          <Text style={{ color: "crimson", fontFamily: "Ciutadella-Bold" }}>
-            Sign Up
+          <Text style={globalStyles.paragraph}>Skip</Text>
+        </TouchableOpacity>
+        <View style={{ marginTop: "70%", alignItems: "center" }}>
+          <Image source={require("../assets/car.png")} />
+        </View>
+        <View style={{ marginTop: 80, gap: 8 }}>
+          <Text style={globalStyles.subTitleText}>Welcome</Text>
+          <Text style={globalStyles.paragraph}>
+            Find a best possible way to park
           </Text>
+          <View
+            style={{ flexDirection: "row", justifyContent: "center", gap: 5 }}
+          >
+            <View style={styles.point}></View>
+            <View style={styles.point}></View>
+            <View style={styles.point}></View>
+          </View>
+        </View>
+        <View
+          style={{ marginTop: 50, flex: 1, justifyContent: "space-between" }}
+        >
+          <View style={{ gap: 20 }}>
+            <CustomButton
+              title="Login with Email"
+              buttonColor="#2D2D2D"
+              textColor="white"
+              icon={<FontAwesome name="envelope" size={24} color="white" />}
+              onPress={() => {
+                navigation.navigate("Register");
+              }}
+            />
+
+            <CustomButton
+              title="Login with Phone"
+              buttonColor="white"
+              textColor="#2D2D2D"
+              icon={<Ionicons name="call" size={24} color="#2D2D2D" />}
+            />
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              gap: 10,
+              alignItems: "center",
+            }}
+          >
+            <Text style={globalStyles.paragraph}>Don’t have an account?</Text>
+            <Text style={{ color: "crimson", fontFamily: "Ciutadella-Bold" }}>
+              Sign Up
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -72,6 +81,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     position: "relative",
+    paddingBottom: 50,
   },
   point: {
     width: 6,

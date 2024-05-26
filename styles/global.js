@@ -3,11 +3,8 @@ import { StyleSheet } from "react-native";
 export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 24,
-    paddingTop: 80,
-    paddingBottom: 50,
+    paddingHorizontal: 16,
     backgroundColor: "#EAEAF3",
-    // backgroundColor: "#F4F4FA",
   },
   titleText: {
     color: "#2D2D2D",
