@@ -55,7 +55,7 @@ const Home = ({ navigation }) => {
               textColor="#2D2D2D"
               icon={<Ionicons name="call" size={24} color="#2D2D2D" />}
               onPress={() => {
-                navigation.navigate("ComfirmForgetPassword");
+                navigation.navigate("LoginWithphone");
               }}
             />
           </View>

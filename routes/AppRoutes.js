@@ -1,9 +1,10 @@
+import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import Register from "../screens/register";
 import ComfirmForgetPassword from "../screens/comfrimForgetPassword";
-
-import { createStackNavigator } from "@react-navigation/stack";
 import LoginWithEmail from "../screens/LoginWithEmail";
+import LoginWithphone from "../screens/LoginWithPhone";
+import ForgetPassword from "../screens/ForgetPassword";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,8 @@ export default function AppRoutes() {
         component={ComfirmForgetPassword}
       />
       <Stack.Screen name="LoginWithEmail" component={LoginWithEmail} />
+      <Stack.Screen name="LoginWithphone" component={LoginWithphone} />
+      <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
     </Stack.Navigator>
   );
 }

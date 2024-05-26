@@ -11,14 +11,14 @@ import HSInput from "../components/HSInput";
 import CustomButton from "../components/HSbutton";
 import { globalStyles } from "../styles/global";
 import HeaderComponent from "../components/Header";
-const LoginWithEmail = ({ navigation }) => {
+const LoginWithphone = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#130F26" }}>
       <StatusBar barStyle="light-content" backgroundColor="#130F26" />
       <HeaderComponent title="Glad to see you!!" />
       <View style={styles.container}>
         <View style={{ flexDirection: "column", gap: 22 }}>
-          <HSInput placeholder="Email" />
+          <HSInput placeholder="Phone Number" keyboardType="numeric" />
           <HSInput placeholder="Password" secureTextEntry={true} />
           <View
             style={{
@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginWithEmail;
+export default LoginWithphone;

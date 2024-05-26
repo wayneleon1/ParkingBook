@@ -1,10 +1,12 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Image, View, Text, StyleSheet } from "react-native";
+import { Image, View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import CustomButton from "../components/HSbutton";
 import { globalStyles } from "../styles/global";
+import { useNavigation } from "@react-navigation/native";
 
 const ComfirmForgetPassword = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={globalStyles.container}>
       <View style={styles.container}>
@@ -44,17 +46,23 @@ const ComfirmForgetPassword = () => {
           <Text style={globalStyles.paragraph}>
             Didn’t receive the email? Check your spam filter,
           </Text>
-          <Text
-            style={{
-              fontSize: 18,
-              textAlign: "center",
-              lineHeight: 21.6,
-              color: "crimson",
-              fontFamily: "Ciutadella-regular",
+          <TouchableOpacity
+            onPress={() => {
+              navigation.goBack();
             }}
           >
-            or try another email address
-          </Text>
+            <Text
+              style={{
+                fontSize: 18,
+                textAlign: "center",
+                lineHeight: 21.6,
+                color: "crimson",
+                fontFamily: "Ciutadella-regular",
+              }}
+            >
+              or try another email address
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
