@@ -9,7 +9,7 @@ const CustomButton = ({ title, buttonColor, textColor, icon, onPress }) => {
         flexDirection: "row",
         justifyContent: "center",
         gap: 20,
-        backgroundColor: `${buttonColor}`,
+        backgroundColor: buttonColor || "#130F26",
         paddingHorizontal: 55,
         paddingVertical: 19,
         borderRadius: 15,
@@ -19,7 +19,7 @@ const CustomButton = ({ title, buttonColor, textColor, icon, onPress }) => {
       <View>
         <Text
           style={{
-            color: `${textColor}`,
+            color: textColor || "white",
             fontSize: 20,
             lineHeight: 24,
             fontFamily: "Ciutadella-medium",

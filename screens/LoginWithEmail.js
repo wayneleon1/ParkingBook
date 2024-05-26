@@ -11,23 +11,39 @@ import HSInput from "../components/HSInput";
 import CustomButton from "../components/HSbutton";
 import { globalStyles } from "../styles/global";
 import HeaderComponent from "../components/Header";
-const Register = ({ navigation }) => {
+const LoginWithEmail = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#130F26" }}>
       <StatusBar barStyle="light-content" backgroundColor="#130F26" />
-      <HeaderComponent title="Let’s start!!" />
+      <HeaderComponent title="Glad to see you!!" />
       <View style={styles.container}>
         <View style={{ flexDirection: "column", gap: 22 }}>
           <HSInput placeholder="Email" />
           <HSInput placeholder="Password" secureTextEntry={true} />
-          <HSInput
-            placeholder="Password Authentication"
-            secureTextEntry={true}
-          />
-          <HSInput placeholder="Phone Number" keyboardType="numeric" />
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-end",
+              gap: 10,
+              alignItems: "center",
+            }}
+          >
+            <Text style={globalStyles.paragraph}>Forgot password?</Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("Forgotpassword");
+              }}
+            >
+              <Text
+                style={{ color: "crimson", fontFamily: "Ciutadella-medium" }}
+              >
+                Retrieve
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
         <View>
-          <CustomButton title="Register" />
+          <CustomButton title="Login" />
           <View
             style={{
               marginTop: 20,
@@ -37,16 +53,16 @@ const Register = ({ navigation }) => {
               alignItems: "center",
             }}
           >
-            <Text style={globalStyles.paragraph}>Have an yaccount?</Text>
+            <Text style={globalStyles.paragraph}>Don’t have an account?</Text>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate("LoginWithEmail");
+                navigation.navigate("Register");
               }}
             >
               <Text
                 style={{ color: "crimson", fontFamily: "Ciutadella-medium" }}
               >
-                Sign In
+                Sign Up
               </Text>
             </TouchableOpacity>
           </View>
@@ -70,4 +86,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Register;
+export default LoginWithEmail;

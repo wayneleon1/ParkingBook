@@ -1,11 +1,12 @@
 import React from "react";
-import { Image, View, Text, StyleSheet, SafeAreaView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Image, View, Text, StyleSheet } from "react-native";
 import CustomButton from "../components/HSbutton";
 import { globalStyles } from "../styles/global";
 
 const ComfirmForgetPassword = () => {
   return (
-    <View style={globalStyles.container}>
+    <SafeAreaView style={globalStyles.container}>
       <View style={styles.container}>
         <View>
           <View
@@ -56,7 +57,7 @@ const ComfirmForgetPassword = () => {
           </Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

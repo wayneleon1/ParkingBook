@@ -1,5 +1,6 @@
 import React from "react";
 import { Image, View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "../components/HSbutton";
 import { globalStyles } from "../styles/global";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
@@ -7,18 +8,18 @@ import { Ionicons } from "@expo/vector-icons";
 
 const Home = ({ navigation }) => {
   return (
-    <View style={globalStyles.container}>
+    <SafeAreaView style={globalStyles.container}>
       <View style={styles.container}>
         <TouchableOpacity
           style={{
             position: "absolute",
             right: 0,
-            top: "20%",
+            top: "10%",
           }}
         >
           <Text style={globalStyles.paragraph}>Skip</Text>
         </TouchableOpacity>
-        <View style={{ marginTop: "70%", alignItems: "center" }}>
+        <View style={{ marginTop: "60%", alignItems: "center" }}>
           <Image source={require("../assets/car.png")} />
         </View>
         <View style={{ marginTop: 80, gap: 8 }}>
@@ -44,7 +45,7 @@ const Home = ({ navigation }) => {
               textColor="white"
               icon={<FontAwesome name="envelope" size={24} color="white" />}
               onPress={() => {
-                navigation.navigate("Register");
+                navigation.navigate("LoginWithEmail");
               }}
             />
 
@@ -67,13 +68,21 @@ const Home = ({ navigation }) => {
             }}
           >
             <Text style={globalStyles.paragraph}>Don’t have an account?</Text>
-            <Text style={{ color: "crimson", fontFamily: "Ciutadella-Bold" }}>
-              Sign Up
-            </Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("Register");
+              }}
+            >
+              <Text
+                style={{ color: "crimson", fontFamily: "Ciutadella-medium" }}
+              >
+                Sign Up
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
