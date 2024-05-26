@@ -11,6 +11,9 @@ const Home = ({ navigation }) => {
     <SafeAreaView style={globalStyles.container}>
       <View style={styles.container}>
         <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("HomeRoutes");
+          }}
           style={{
             position: "absolute",
             right: 0,
