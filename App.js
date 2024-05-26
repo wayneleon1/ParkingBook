@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as Font from "expo-font";
-import AppLoading from "expo-app-loading";
+import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import "react-native-gesture-handler";
 
 import AppRoutes from "./routes/AppRoutes";
+
+// Prevent the splash screen from auto-hiding
+SplashScreen.preventAutoHideAsync();
 
 const getFonts = () =>
   Font.loadAsync({
@@ -16,19 +19,28 @@ const getFonts = () =>
 export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
 
-  if (fontLoaded) {
-    return (
-      <NavigationContainer>
-        <AppRoutes />
-      </NavigationContainer>
-    );
-  } else {
-    return (
-      <AppLoading
-        startAsync={getFonts}
-        onFinish={() => setFontLoaded(true)}
-        onError={(err) => console.error(err)}
-      />
-    );
+  useEffect(() => {
+    const loadResources = async () => {
+      try {
+        await getFonts();
+      } catch (e) {
+        console.warn(e);
+      } finally {
+        setFontLoaded(true);
+        await SplashScreen.hideAsync();
+      }
+    };
+
+    loadResources();
+  }, []);
+
+  if (!fontLoaded) {
+    return null; // Render nothing until the fonts are loaded
   }
+
+  return (
+    <NavigationContainer>
+      <AppRoutes />
+    </NavigationContainer>
+  );
 }
