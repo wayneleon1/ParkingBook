@@ -1,0 +1,58 @@
+[
+  {
+    "image": "https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFya2luZ3xlbnwwfHwwfHx8MA%3D%3D",
+    "title": "Downtown Parking Lot",
+    "street": "123 Main St",
+    "price": "7$",
+    "time_published": "7min",
+    "description": "Convenient parking in the heart of downtown, close to shops and restaurants."
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?q=80&w=2865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "City Center Garage",
+    "street": "456 Center St",
+    "price": "10$",
+    "time_published": "12min",
+    "description": "Secure multi-level garage with easy access to city attractions."
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1616363088386-31c4a8414858?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBhcmtpbmd8ZW58MHx8MHx8fDA%3D",
+    "title": "Mall Parking",
+    "street": "789 Mall Rd",
+    "price": "5$",
+    "time_published": "20min",
+    "description": "Ample parking at the mall, perfect for shoppers and diners."
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBhcmtpbmd8ZW58MHx8MHx8fDA%3D",
+    "title": "Airport Parking",
+    "street": "101 Airport Blvd",
+    "price": "15$",
+    "time_published": "5min",
+    "description": "Convenient parking near the airport terminal, ideal for travelers."
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1604063155785-ee4488b8ad15?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBhcmtpbmd8ZW58MHx8MHx8fDA%3D",
+    "title": "Beachside Parking",
+    "street": "202 Ocean Dr",
+    "price": "8$",
+    "time_published": "9min",
+    "description": "Parking with a view, just steps from the beach."
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1526626607369-f89fe1ed77a9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHBhcmtpbmd8ZW58MHx8MHx8fDA%3D",
+    "title": "Shopping District Parking",
+    "street": "303 Market St",
+    "price": "12$",
+    "time_published": "15min",
+    "description": "Central parking in the busy shopping district, close to major stores."
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1607286966263-af9fed5a735c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHBhcmtpbmd8ZW58MHx8MHx8fDA%3D",
+    "title": "Stadium Parking",
+    "street": "404 Sports Ave",
+    "price": "20$",
+    "time_published": "3min",
+    "description": "Perfect for game days, located right next to the stadium."
+  }
+]

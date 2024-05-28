@@ -10,12 +10,14 @@ import {
   StatusBar,
   Pressable,
   Image,
+  FlatList,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import SearchInput from "../components/SearchInput";
 import { globalStyles } from "../styles/global";
 import { ScrollView } from "react-native-gesture-handler";
+import parking from "../data/parking.json";
 
 const Welcome = () => {
   return (
@@ -96,6 +98,45 @@ const Welcome = () => {
             })}
           </ScrollView>
         </View>
+        <View style={{ flex: 1, marginTop: 50 }}>
+          <Text style={globalStyles.titleText}>Nearst Parking Spaces</Text>
+          <FlatList
+            showsVerticalScrollIndicator={false}
+            style={{ marginTop: 20 }}
+            data={parking}
+            renderItem={({ item }) => (
+              <View style={styles.parkingCard}>
+                <View style={{ width: "40%" }}>
+                  <Image
+                    source={{
+                      uri: item.image,
+                    }}
+                    style={styles.image}
+                  />
+                </View>
+                <View style={{ flex: 1, padding: 5 }}>
+                  <Text
+                    style={{ fontSize: 18, fontFamily: "Ciutadella-medium" }}
+                  >
+                    {item.title}
+                  </Text>
+                  <Text
+                    style={{
+                      marginTop: 5,
+                      fontSize: 18,
+                      lineHeight: 21.6,
+                      color: "#2D2D2D",
+                      opacity: 0.5,
+                      fontFamily: "Ciutadella-regular",
+                    }}
+                  >
+                    {item.street}
+                  </Text>
+                </View>
+              </View>
+            )}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -108,7 +149,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     paddingHorizontal: 32,
     paddingTop: 50,
-    paddingBottom: 50,
+    paddingBottom: 20,
     borderTopLeftRadius: 56,
     borderTopRightRadius: 56,
   },
@@ -128,6 +169,21 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     gap: 10,
     borderRadius: 10,
+  },
+  parkingCard: {
+    flexDirection: "row",
+    gap: 10,
+    backgroundColor: "white",
+    padding: 10,
+    marginBottom: 10,
+    borderRadius: 15,
+    height: 126,
+  },
+  image: {
+    height: "100%",
+    width: "100%",
+    resizeMode: "cover",
+    borderRadius: 15,
   },
 });
 
