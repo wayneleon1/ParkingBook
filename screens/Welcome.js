@@ -114,24 +114,82 @@ const Welcome = () => {
                     style={styles.image}
                   />
                 </View>
-                <View style={{ flex: 1, padding: 5 }}>
-                  <Text
-                    style={{ fontSize: 18, fontFamily: "Ciutadella-medium" }}
-                  >
-                    {item.title}
-                  </Text>
-                  <Text
+                <View
+                  style={{
+                    flex: 1,
+                    padding: 5,
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    position: "relative",
+                  }}
+                >
+                  <View
                     style={{
-                      marginTop: 5,
-                      fontSize: 18,
-                      lineHeight: 21.6,
-                      color: "#2D2D2D",
-                      opacity: 0.5,
-                      fontFamily: "Ciutadella-regular",
+                      backgroundColor: "#FFF3F3",
+                      paddingVertical: 6,
+                      width: 60,
+                      borderRadius: 15,
+                      alignItems: "center",
+                      position: "absolute",
+                      right: 0,
                     }}
                   >
-                    {item.street}
-                  </Text>
+                    <Text
+                      style={{
+                        color: "#F43939",
+                        fontSize: 12,
+                        fontFamily: "Ciutadella-regular",
+                        lineHeight: 14.4,
+                      }}
+                    >
+                      {item.time_published}
+                    </Text>
+                  </View>
+                  <View>
+                    <Text
+                      style={{ fontSize: 18, fontFamily: "Ciutadella-medium" }}
+                    >
+                      {item.title}
+                    </Text>
+                    <Text
+                      style={{
+                        marginTop: 5,
+                        fontSize: 18,
+                        lineHeight: 21.6,
+                        color: "#2D2D2D",
+                        opacity: 0.5,
+                        fontFamily: "Ciutadella-regular",
+                      }}
+                    >
+                      {item.street}
+                    </Text>
+                  </View>
+                  <View>
+                    <View
+                      style={{ flexDirection: "row", alignItems: "center" }}
+                    >
+                      <Text
+                        style={{
+                          color: "#F43939",
+                          fontSize: 20,
+                          fontFamily: "Ciutadella-Bold",
+                          lineHeight: 24,
+                        }}
+                      >
+                        {item.price}
+                      </Text>
+                      <Text
+                        style={{
+                          color: "#F43939",
+                          fontSize: 12,
+                          fontFamily: "Ciutadella-regular",
+                          lineHeight: 14.4,
+                        }}
+                      >
+                        /hour
+                      </Text>
+                    </View>
+                  </View>
                 </View>
               </View>
             )}

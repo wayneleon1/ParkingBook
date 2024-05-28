@@ -35,14 +35,17 @@ const LoginWithEmail = ({ navigation }) => {
       valid = false;
     } else if (!isValidEmail(email)) {
       setEmailError("Email provided is invalid ");
+      valid = false;
     } else {
       setEmailError("");
     }
 
     if (!password.trim()) {
       setPasswordError("Password is invalid");
+      valid = false;
     } else if (password.length < 8) {
       setPasswordError("Password must be over 8 chars long ");
+      valid = false;
     } else {
       setPasswordError("");
     }
@@ -58,14 +61,17 @@ const LoginWithEmail = ({ navigation }) => {
           email,
           password
         );
-        Alert.alert("Success", "You're successufuly logged in!", [
-          {
-            text: "Continue",
-            onPress: () => navigation.navigate("HomeRoutes"),
-          },
-        ]);
+        Alert.alert(
+          `Welcome ${response.user.email}`,
+          "You're successufuly logged in!",
+          [
+            {
+              text: "Continue",
+              onPress: () => navigation.navigate("HomeRoutes"),
+            },
+          ]
+        );
       } catch (error) {
-        console.log(error);
         Alert.alert("Error", "Invalid-credential", [
           { text: "OK", onPress: () => console.log("alert closed") },
         ]);

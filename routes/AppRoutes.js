@@ -5,7 +5,6 @@ import ComfirmForgetPassword from "../screens/comfrimForgetPassword";
 import LoginWithEmail from "../screens/LoginWithEmail";
 import LoginWithphone from "../screens/LoginWithPhone";
 import ForgetPassword from "../screens/ForgetPassword";
-import { NavigationContainer } from "@react-navigation/native";
 import HomeRoutes from "./HomeRoutes";
 
 const Stack = createStackNavigator();
