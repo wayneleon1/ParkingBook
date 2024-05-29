@@ -25,7 +25,7 @@ const HSInput = ({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
-    padding: 20,
+    padding: 15,
     borderRadius: 15,
   },
 });

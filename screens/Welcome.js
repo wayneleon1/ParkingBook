@@ -11,6 +11,7 @@ import {
   Pressable,
   Image,
   FlatList,
+  TouchableOpacity,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -18,8 +19,10 @@ import SearchInput from "../components/SearchInput";
 import { globalStyles } from "../styles/global";
 import { ScrollView } from "react-native-gesture-handler";
 import parking from "../data/parking.json";
+import { useNavigation } from "@react-navigation/native";
 
 const Welcome = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#130F26" }}>
       <StatusBar barStyle="light-content" backgroundColor="#130F26" />
@@ -61,9 +64,6 @@ const Welcome = () => {
               <Text style={styles.paragraph}>Find an easy parking spot</Text>
             </View>
             <Pressable
-              onPress={() => {
-                navigation.goBack();
-              }}
               style={{
                 backgroundColor: "#2A344E",
                 width: 44,
@@ -98,14 +98,19 @@ const Welcome = () => {
             })}
           </ScrollView>
         </View>
-        <View style={{ flex: 1, marginTop: 50 }}>
+        <View style={{ flex: 1, marginTop: 20 }}>
           <Text style={globalStyles.titleText}>Nearst Parking Spaces</Text>
           <FlatList
             showsVerticalScrollIndicator={false}
             style={{ marginTop: 20 }}
             data={parking}
             renderItem={({ item }) => (
-              <View style={styles.parkingCard}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("ParkingDetails", item);
+                }}
+                style={styles.parkingCard}
+              >
                 <View style={{ width: "40%" }}>
                   <Image
                     source={{
@@ -191,7 +196,7 @@ const Welcome = () => {
                     </View>
                   </View>
                 </View>
-              </View>
+              </TouchableOpacity>
             )}
           />
         </View>
@@ -206,7 +211,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F4F4FA",
     flexDirection: "column",
     paddingHorizontal: 32,
-    paddingTop: 50,
+    paddingTop: 30,
     paddingBottom: 20,
     borderTopLeftRadius: 56,
     borderTopRightRadius: 56,

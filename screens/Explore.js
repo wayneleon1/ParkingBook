@@ -8,6 +8,7 @@ import {
   ScrollView,
   FlatList,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import { globalStyles } from "../styles/global";
 import SearchInput from "../components/SearchInput";
@@ -68,7 +69,7 @@ const Explore = () => {
           style={{ marginTop: 20 }}
           data={parking}
           renderItem={({ item }) => (
-            <View style={styles.parkingCard}>
+            <TouchableOpacity style={styles.parkingCard}>
               <View style={{ width: "40%" }}>
                 <Image
                   source={{
@@ -152,7 +153,7 @@ const Explore = () => {
                   </View>
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
           )}
         />
       </View>

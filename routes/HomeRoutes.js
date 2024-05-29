@@ -1,10 +1,12 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import Icon from "react-native-vector-icons/Ionicons";
 import Welcome from "../screens/Welcome";
 import Explore from "../screens/Explore";
 import History from "../screens/History";
 import Profile from "../screens/Profile";
+import ParkingDetails from "../screens/ParkingDetails";
 
 const Tab = createBottomTabNavigator();
 
@@ -40,10 +42,25 @@ export default function HomeRoutes() {
         },
       })}
     >
-      <Tab.Screen name="Home" component={Welcome} />
+      <Tab.Screen name="Home" component={HomeButton} />
       <Tab.Screen name="Explore" component={Explore} />
       <Tab.Screen name="History" component={History} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
+  );
+}
+
+const Stack = createStackNavigator();
+
+function HomeButton() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="ParkingDetails" component={ParkingDetails} />
+    </Stack.Navigator>
   );
 }

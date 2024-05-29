@@ -10,7 +10,7 @@ const SearchInput = ({ bgColor }) => {
         gap: 18,
         alignItems: "center",
         backgroundColor: bgColor || "#EAEAF3",
-        padding: 20,
+        padding: 15,
         borderRadius: 15,
       }}
     >
